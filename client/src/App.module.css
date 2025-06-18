@@ -1,0 +1,62 @@
+/* App.module.css */
+
+.chatContainer {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #3a4a5a; /* gray-blue */
+  min-height: 100vh;
+  color: white;
+}
+
+.messages {
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #4a5b6b; /* slightly darker gray-blue */
+  border-radius: 5px;
+}
+
+.inputRow {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  background-color: #2e3b49; /* even darker input box */
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #6ea3d0;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5c94c1;
+}
+
+/* WebKit browsers */
+.messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+  border: 2px solid transparent; /* optional, for some padding */
+}

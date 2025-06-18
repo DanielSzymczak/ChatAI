@@ -1,0 +1,28 @@
+version: '3'
+services:
+  client:
+    build: ./client
+    ports:
+      - "3000:80"
+    depends_on:
+      - server
+
+  server:
+    build: ./server
+    ports:
+      - "8000:8000"
+    environment:
+      - API_KEY=your_api_key_here
+    volumes:
+      - data-volume:/data
+
+  initdb:
+    build:
+      context: ./init
+      dockerfile: Dockerfile.init
+    volumes:
+      - data-volume:/data
+    restart: "no"
+
+volumes:
+  data-volume:
